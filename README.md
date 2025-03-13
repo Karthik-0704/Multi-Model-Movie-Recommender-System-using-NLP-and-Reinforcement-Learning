@@ -4,7 +4,7 @@ This **Movie Recommendation System** is a comprehensive platform designed to pro
 <h1 align="center">Movie Recommendation System</h1>
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c2982d58-b1f1-4c17-96c3-2b967401517b" alt="Movie Recommendation System Demo" height = 300px >
+  <img src="https://github.com/user-attachments/assets/e0d29c8f-dfb2-4a1d-8d38-bfbefc2e215a" alt="Movie Recommendation System Demo" height = 500px >
 </p>
 
 ### 1. Content-Based Filtering (NLP-based):
