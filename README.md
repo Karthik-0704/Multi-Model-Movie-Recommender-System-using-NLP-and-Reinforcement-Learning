@@ -1,6 +1,11 @@
 # Movie Recommendation System with NLP and Reinforcement Learning
 
 This **Movie Recommendation System** is a comprehensive platform designed to provide personalized movie recommendations using a combination of **Content-Based Filtering**, **Collaborative Filtering**, and **Reinforcement Learning (RL)** techniques. The system helps users find movies based on their preferences or past interactions and provides an intuitive and dynamic user interface to make movie discovery a seamless experience.
+<h1 align="center">Movie Recommendation System</h1>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c2982d58-b1f1-4c17-96c3-2b967401517b" alt="Movie Recommendation System Demo" height = 300px >
+</p>
 
 ### 1. Content-Based Filtering (NLP-based):
 - **TF-IDF Vectorizer**: The system uses the **Term Frequency-Inverse Document Frequency (TF-IDF)** algorithm to analyze movie descriptions based on their genres (Action, Drama, Comedy, etc.). This technique helps represent the genre information as vectors, capturing the importance of each genre's role in describing the movie.
