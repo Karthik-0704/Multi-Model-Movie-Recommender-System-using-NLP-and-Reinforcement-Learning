@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+/* Center the movie shot section */
+.movie-shot-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.movie-shot-container img {
+    width: 500px; /* Fixed width for the image */
+    height: auto;
+    margin-top: 10px;
+}
+
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#recommendations-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#recommendations-list li {
+    margin: 5px 0;
+}
+

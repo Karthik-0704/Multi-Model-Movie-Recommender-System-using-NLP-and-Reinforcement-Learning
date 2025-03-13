@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Recommendation System</h1>
+        <h2>Get movie recommendations based on your preferences</h2>
+
+                <div class="movie-shot-container">
+                    <img src="giffy.gif" alt="Movie Shot" width="500" height="auto" />
+                </div>
+
+        <div>
+            <h3>Content-Based Recommendations</h3>
+            <input type="text" id="movie-title" placeholder="Enter Movie Title" />
+            <button onclick="getContentRecommendations()">Get Recommendations</button>
+            <div id="content-results"></div>
+        </div>
+
+        <div>
+            <h3>Collaborative Filtering Recommendations</h3>
+            <input type="number" id="user-id" placeholder="Enter User ID" />
+            <button onclick="getCollaborativeRecommendations()">Get Recommendations</button>
+            <div id="collaborative-results"></div>
+        </div>
+
+        <div>
+            <h3>Reinforcement Learning Recommendations</h3>
+            <button onclick="getRLRecommendations()">Get Recommendations</button>
+            <div id="rl-results"></div>
+        </div>
+
+        <div>
+            <h3>Recommendations</h3>
+            <div id="recommendations-list"></div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function getContentRecommendations() {
+            const movieTitle = document.getElementById('movie-title').value;
+            fetch(`/content-recommendations?title=${movieTitle}`)
+                .then(response => response.json())
+                .then(data => {
+                    const contentResultsDiv = document.getElementById('content-results');
+                    contentResultsDiv.innerHTML = '<ul>' + data.recommendations.map(movie => `<li>${movie}</li>`).join('') + '</ul>';
+                });
+        }
+
+        function getCollaborativeRecommendations() {
+            const userId = document.getElementById('user-id').value;
+            fetch(`/collaborative-recommendations?user_id=${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const collaborativeResultsDiv = document.getElementById('collaborative-results');
+                    collaborativeResultsDiv.innerHTML = '<ul>' + data.recommendations.map(movie => `<li>${movie}</li>`).join('') + '</ul>';
+                });
+        }
+
+        function getRLRecommendations() {
+            fetch('/rl-recommendations')
+                .then(response => response.json())
+                .then(data => {
+                    const rlResultsDiv = document.getElementById('rl-results');
+                    rlResultsDiv.innerHTML = '<ul>' + data.recommendations.map(movie => `<li>${movie}</li>`).join('') + '</ul>';
+                });
+        }
+    </script>
+</body>
+</html>
