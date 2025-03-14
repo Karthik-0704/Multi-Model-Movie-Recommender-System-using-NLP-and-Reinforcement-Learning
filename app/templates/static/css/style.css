@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 20px;
 }
-/* Center the movie shot section */
+
 .movie-shot-container {
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ body {
 }
 
 .movie-shot-container img {
-    width: 500px; /* Fixed width for the image */
+    width: 500px;
     height: auto;
     margin-top: 10px;
 }
